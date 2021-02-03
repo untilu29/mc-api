@@ -55,6 +55,12 @@ func GetLinkNCT(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	writeOKResponse(w, mp3)
 }
 
+func GetLinkNYoutube(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	url := r.URL.Query().Get("url")
+	mp3 := getLinkYoutube(url)
+	writeOKResponse(w, mp3)
+}
+
 // Writes the response as a standard JSON response with StatusOK
 func writeOKResponse(w http.ResponseWriter, m interface{}) {
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")

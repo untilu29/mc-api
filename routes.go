@@ -23,6 +23,7 @@ func AllRoutes() Routes {
 		Route{"Bookshow", "GET", "/books/:isdn", BookShow},
 		Route{"Bookshow", "POST", "/books", BookCreate},
 		Route{"GetLinkNCT", "GET", "/nct", GetLinkNCT},
+		Route{"GetYoutubeMP3", "GET", "/yt", GetLinkNYoutube},
 	}
 	return routes
 }
